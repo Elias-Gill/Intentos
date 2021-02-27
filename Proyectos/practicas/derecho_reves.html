@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="numero"> <button id="boton">puto</button>
+   <script>
+        /*let boton = document.getElementById("boton");
+        let caja = document.getElementById("numero");
+        boton.addEventListener("click", factorial);
+        */
+        comparar('La ruta nos aporto otro paso natural');
+        function comparar(linea) {
+            let oracion = linea.toLowerCase();
+            let acomparar = {
+                derecho: "",
+                reves: "",
+            };
+            for (let n = 0; n < oracion.length; n++) {
+                if (oracion.charAt(n) != " ") {
+                    acomparar.derecho = acomparar.derecho + oracion.charAt(n);
+                    acomparar.reves = oracion.charAt(n) + acomparar.reves;      
+                }else{};
+            };    
+            console.log(acomparar.derecho===acomparar.reves, acomparar)
+        };
+        //obviamente este es el lugar privilegiado para poder escribir lo que se te de la ganaaaa
+   </script>
+</body>
+</body>
+</html>
+

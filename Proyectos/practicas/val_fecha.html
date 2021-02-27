@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</heasd>
+<body>
+    <input type="number" id="numero"> <button id="boton">puto</button>
+    <script>
+        let palabra = "Nací el 05/04/1982 en Donostia";
+
+        function validar(params) {
+            let descomposicion = palabra.split(' ');
+            //no se por que, pero NaN != NaN, incluso para el mismo elemento
+            descomposicion.forEach(element => {
+                if (parseInt(element) == parseInt(element)) {
+                    palabra = element.split('/');
+                    if (palabra[0].length == 2 && palabra[1].length == 2 && palabra[2].length == 4){
+                        console.log('valido')
+                    } else {
+                        console.log('no valido')
+                    }
+                };
+            });
+        }
+        validar()
+    </script>
+</body>
+</body>
+</html>

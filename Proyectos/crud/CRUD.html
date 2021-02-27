@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="icons/icons.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>COSA FEA, COSA INMUNDA</title>
+
+  </head>
+  <body>
+    
+    <!------HEADER------>
+    <div class="container-fluid bg-info text-light py-4">
+      <div class="container" style="margin-left: 5%;">
+        <div class="row h4" style="margin-left: 6%;">
+          <div class="container col-7">
+            <i style="font-size:500%; font-family:Franklin Gothic Medium; text-shadow: 2px 2px 1px black"><b>Mira esto...</b></i>
+          </div>
+          <div class="container col-5 text-muted" style="margin-top: 5%; font-style: italic;">
+            "Vas a poder crear los amigos que te faltan...
+            <br>Para nunca volver a estar solo...
+            <br>Ya no se que poner, estoy harto de mi inutilidad"
+          </div>
+        </div>
+        <div class="row h6" style="margin-left: 5.8%;">
+          <p style="font-size: 200%; font-family: Georgia;"><i>Asi es como <b>NO</b> se hacen las cosas</i></p>
+        </div>
+      </div>
+    </div>
+    
+    <!------CONTENT------>
+    <div class="container py-2" style="margin-left: 8%;">
+      <div class="row">
+        
+        <!--LoU: head-->
+        <div class="container col-8 py-3">  
+          <div class="row h2">
+            <b>Estos son los usuarios creados</b>   
+          </div>
+          <!--LoU: filters-->
+          <div class="container mt-5">
+            <select id="filtActividad" class="form-select-sm">
+              <option value="todos">Activi: todos</option>
+              <option value="activos">Activos</option>
+              <option value="inactivos">Inactivos</option>
+            </select>
+            <select name="" id="filtEdad" class="form-select-sm">
+              <option value="todos">Edad:todos</option>
+              <option value="jovenes">18-35 años</option>
+              <option value="mayores">Matusalem</option>
+              <option value="menores">Modo pa'i</option>
+            </select>
+            <span id="recargar" class="icon-loop2" style="margin-left: 3em; font-size: larger;"><span>
+            <!--LoU:users-->
+            <div  id="listUsers" style="overflow-y:scroll; height: 440px; width: 85%; margin-top: 1.8em;">
+            </div> 
+          </div>
+        </div>
+
+        <!--Form:create user-->
+        <div class="container py-3 col-4">  
+          <div class="row h2">
+            <b>Crea nuevos usuarios</b>
+          </div> 
+          <div class="row py-2">
+            <span class="border border-end-0 border-bottom-0 border-dark">
+              <form id="createUser" style="margin-left: 6%; margin-top: 6%;">
+                <div class="row py-2">
+                  <b>Escribe nombre y apellido</b>
+                  <p class="mt-1"><input type="text" placeholder="Mariano Estefano" id="nombre" required></p>
+                </div>
+                <div class="row py-2">
+                  <b>Elige un ID</b>
+                  <p class="mt-1"><input type="text" id="yourID" placeholder="juanito_Tactico33" required></p>
+                </div>    
+                <div class="row py-2">
+                  <b>Dame tu numero baby</b>
+                  <p class="mt-1"><input type="tel" id="telephone" placeholder="0985-888888" pattern="[0-9]{4}[ -][0-9]{6}" title="Acaso no vez bien ? el formato es xxxx-xxxxxx (puedes usar un espacio en vez del guion)"></p>
+                </div>
+                <div class="row py-2" id="edad">
+                  <b>En que rango de edad se encuentra ?</b>
+                  <select style="width: 50%; margin-left: 0.9em;" class="mt-2" id="edad">
+                    <option value="jovenes">18 a 35 años</option>
+                    <option value="mayores">Matusalem</option>
+                    <option value="menores">Menos de 18 años</option>
+                  </select>
+                </div>
+                <div class="row py-2">
+                  <div class="container justify-right">
+                    <p class="text-muted" style="font-size:larger;"></p>Eso, dame tus datos . . . <button class="btn btn-primary" id="sumit">Crear</button>
+                  </div>
+                </div>
+              </form>
+            </span>
+          </div>  
+        </div>
+      <!--instrucciones de uso-->
+      </div>
+      <div class="row py-5" style="width:35em;">
+        <h4 style="font-family: sans-serif; font-style: italic;"><b>Como usar esta cosa:</b></h4>
+        <p>Demasiado luego tengo que explicarte como usar, vos sabes mejor que yo como funciona la cosa esta que YO programe...</p>
+        <br>-Puedes crear nuevos usuarios con el formulario de la derecha.
+        <br>-Estos aparecceran en la lista central; cuentas con filtros de edad y actividad.
+        <br>-Los usuario activos se marcan en verde, los inactivos en rojo.
+        <br>-Para eliminar un usuario solo debes presionar <i class="icon-user-minus"></i>.Si deseas activarlo/desactivarlo utiliza <i class="icon-switch"></i>
+        <br>-Para modificar un usuario presiona sobre su <i>nombre</i> 
+        <br>Para ver sus caracteristicas foccus sobre su <i>ID</i>
+      </div>
+    </div>
+    <!----SCRIPTS----->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="capazFuncione.js"></script>
+  </body>
+</html>
